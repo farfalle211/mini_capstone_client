@@ -1,0 +1,24 @@
+<h1><%= @product["name"] %></h1>
+
+<h3>Price: <%= @product["formatted"]["price"] %></h3>
+<h3>Tax: <%= @product["formatted"]["tax"] %></h3>
+<h3>Total: <%= @product["formatted"]["total"] %></h3>
+
+<h3>Images: </h3>
+<ol>
+  <% @product["images"].each do |image| %>
+    <li><%= image %></li>
+  <% end %> 
+</ol>
+
+<h4> Description: <%= @product["description"] %></h4>
+<h4> Description: <%= @product["is_discounted"] %></h4>
+<h4> Description: <%= @product["in_stock"] %></h4>
+<h4> Description: <%= @product["supplier_id"] %></h4>
+
+<h4>Suppliers: </h4>
+<ol>
+  <% @product["supplier"].each do |supplier| %>
+  <li><%= supplier %></li>
+  <% end %>
+</ol>
